@@ -1,0 +1,10 @@
+import json
+places = []
+while True:
+     place = input("Enter a place (or type 'done' to finish): ")
+     if place.lower() == 'done':
+         break
+     places.append(place)
+places_json = json.dumps(places)
+print("Places in JSON format:", places_json)
+print("Places:", places)
