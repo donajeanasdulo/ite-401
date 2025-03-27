@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <title>Where You At? App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #9f08eb;
+        }
+        header {
+            background-color: #c32db9;
+            color: rgb(15, 11, 11);
+            text-align: center;
+            padding: 10px 0;
+        }
+        .app-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgb(195, 17, 235);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        .input-group {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .input-group input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ff0080;
+            border-radius: 4px;
+        }
+        .input-group button {
+            padding: 8px 12px;
+            border: none;
+            background-color: #fb0494;
+            color: rgb(17, 16, 16);
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .input-group button:hover {
+            background-color: #5c04df;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Where You At? App</h1>
+    </header>
+    <div class="app-container">
+        <div class="input-group">
+            <input type="text" id="locationInput" placeholder="Enter a location">
+            <button id="addLocationButton">Search Location</button>
+        </div>
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
